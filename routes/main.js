@@ -21,4 +21,7 @@ router.get("/logout", authController.logout);
 router.get("/signup", authController.getSignup);
 router.post("/signup", authController.postSignup);
 
+//routes for artworks 
+router.get("/artworks/girl-with-pearl-earrings", homeController.getGirl);
+
 module.exports = router;
