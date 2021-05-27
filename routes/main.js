@@ -23,5 +23,6 @@ router.post("/signup", authController.postSignup);
 
 //routes for artworks 
 router.get("/artworks/girl-with-pearl-earrings", homeController.getGirl);
+router.get("/artworks/the-milkmaid", homeController.getMilkmaid);
 
 module.exports = router;

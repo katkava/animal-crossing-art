@@ -19,4 +19,7 @@ module.exports = {
   getGirl: (req, res) => {
     res.render("artworks/girl-with-pearl-earrings.ejs");
   },
+  getMilkmaid: (req, res) => {
+    res.render("artworks/the-milkmaid.ejs");
+  },
 };
