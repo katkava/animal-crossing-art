@@ -1,23 +1,25 @@
 <%- include('partials/header') -%>
 
- <main class="container">
-  <h1> Want to be an art history connoiseur? Browse and learn real facts about the art in the game  </h1>
-
-  <h4> will just have layout from onset here </h4>
-
-  <div class="row justify-content-around mt-5">
-   <img src="https://cdn.europosters.eu/image/750/jan-vermeer-girl-with-a-pearl-earring-i96614.jpg" alt="Vermeer, Girl with Pearl Earrings">
-   <h3>Johannes Vermeer, Girl with a Pearl Earring, 1664</h3>
-   <a href="/artworks/girl-with-pearl-earrings" class="col-3 btn btn-primary"> Read More..</a>
+ 
+  <div class="container">
+   <div class="row justify-content-center mt-5">
+    <ul class="row list-unstyled">
+     <% for(var i=0; i<paintings.length; i++) {%>
+      <li class="col-6 justify-content-between mt-5">
+       <a href="/painting/<%= paintings[i]._id%>">
+        <img class="img-fluid" src="<%= paintings[i].image%>">
+       </a>
+       <h4>
+        <%= paintings[i].artist %>
+       </h4>
+       <h4>
+        <%= paintings[i].name%>
+       </h4>
+      </li>
+      <% } %>
+    </ul>
+   </div>
   </div>
-
-  <div class="row justify-content-around mt-5">
-   <img src="https://imgc.artprintimages.com/img/print/the-milkmaid_u-l-pnsah10.jpg?h=550&p=0&w=550&background=fbfbfb"
-    alt="Vermeer, The Milkmaid">
-   <h3>Johannes Vermeer, The Milkmaid</h3>
-   <a href="/artworks/the-milkmaid" class="col-3 btn btn-primary"> Read More..</a>
-  </div>
- </main>
 
 
  <%- include('partials/footer') -%>

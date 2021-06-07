@@ -3,13 +3,13 @@ const router = express.Router();
 const authController = require("../controllers/auth");
 const homeController = require("../controllers/home");
 const postsController = require("../controllers/posts");
+const paintingsController = require("../controllers/paintings");
 const { ensureAuth, ensureGuest } = require("../middleware/auth");
 
 //Main Routes - simplified for now
 router.get("/", homeController.getIndex);
 router.get("/game", homeController.getGame);
 router.get("/gallery3d", homeController.getGallery3d);
-router.get("/learn", homeController.getLearn);
 router.get("/community", homeController.getCommunity);
 
 //routes for Community login 
@@ -21,8 +21,7 @@ router.get("/logout", authController.logout);
 router.get("/signup", authController.getSignup);
 router.post("/signup", authController.postSignup);
 
-//routes for artworks 
-router.get("/artworks/girl-with-pearl-earrings", homeController.getGirl);
-router.get("/artworks/the-milkmaid", homeController.getMilkmaid);
+//routes for paintings 
+router.get("/learn", paintingsController.getLearn);
 
 module.exports = router;
