@@ -1,4 +1,5 @@
 const Painting = require("../models/Painting");
+// const response = require("v-response")
 
 module.exports = {
   
@@ -18,4 +19,23 @@ module.exports = {
       console.log(err);
     }
   },
+  // createPainting = (req, res) => {
+  //     // Upload image to cloudinary
+  //     let painting_body = req.body;
+  //     const new_painting = new Painting_model(painting_body); 
+  //     new_painting.save()
+  //       .then(saved => {
+  //         if(!saved) {
+  //           return res.status(400)
+  //           .json(response.ApiResponse(false, 400, "unable to save painting please try again"))
+  //         }
+  //         if(saved) {
+  //           return res.status(201)
+  //           .json(response.ApiResponse(true, 201, "painting created successfully", saved))
+  //         }
+  //       }).catch(error => {
+  //         return res.status(500)
+  //         .json(reponse.ApiResponse(false, 500, "oops an error occurred", undefined, error))
+  //       }) 
+  // },
 };
