@@ -19,6 +19,14 @@ module.exports = {
       console.log(err);
     }
   },
+  getGame: async (req, res) => {
+    try {
+      const paintings = await Painting.find().sort({ year: "desc" }).lean();
+      res.render("game.ejs", { paintings: paintings, name: req.name, artist: req.artist });
+    } catch (err) {
+      console.log(err);
+    }
+  },
   // createPainting = (req, res) => {
   //     // Upload image to cloudinary
   //     let painting_body = req.body;

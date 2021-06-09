@@ -1,25 +1,25 @@
 <%- include('partials/header') -%>
 
  
-  <div class="container">
-   <div class="row justify-content-center mt-5">
+<div class="container">
+  <div class="row justify-content-center mt-5">
     <ul class="row list-unstyled">
-     <% for(var i=0; i<paintings.length; i++) {%>
-      <li class="col-6 justify-content-between mt-5">
-       <a href="/painting/<%= paintings[i]._id%>">
-        <img class="img-fluid" src="<%= paintings[i].image%>">
-       </a>
-       <h4>
-        <%= paintings[i].artist %>
-       </h4>
-       <h4>
-        <%= paintings[i].name%>
-       </h4>
-      </li>
-      <% } %>
+      <% for(var i=0; i<paintings.length; i++) {%>
+        <li class="col-6 justify-content-between mt-5">
+          <a href="/painting/<%= paintings[i]._id%>">
+            <img class="img-fluid" src="<%= paintings[i].image%>">
+          </a>
+          <h4>
+            <%= paintings[i].artist %>
+          </h4>
+          <h4>
+            <%= paintings[i].name%>
+          </h4>
+        </li>
+        <% } %>
     </ul>
-   </div>
   </div>
+</div>
 
 
  <%- include('partials/footer') -%>

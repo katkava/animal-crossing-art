@@ -21,6 +21,12 @@ const PaintingSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  fakeImage: {
+    type: String
+  },
+  fakeDescription: {
+    type: String
+  }
 });
 
 module.exports = mongoose.model("Painting", PaintingSchema);

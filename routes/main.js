@@ -8,7 +8,6 @@ const { ensureAuth, ensureGuest } = require("../middleware/auth");
 
 //Main Routes - simplified for now
 router.get("/", homeController.getIndex);
-router.get("/game", homeController.getGame);
 router.get("/gallery3d", homeController.getGallery3d);
 router.get("/community", homeController.getCommunity);
 
@@ -23,5 +22,6 @@ router.post("/signup", authController.postSignup);
 
 //routes for paintings 
 router.get("/learn", paintingsController.getLearn);
+router.get("/game", paintingsController.getGame);
 
 module.exports = router;

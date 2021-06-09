@@ -1,16 +1,24 @@
 <%- include('partials/header') -%>
 
- <main class="container">
-  <h1>PLAY NOW, spot the fake!</h1>
-  <div class="row justify-content-around mt-5">
-   <h3>Is this painting fake? </h3>
-   <button >This is fake</button>
-   <button >This is real</button>
-   <h4>??</h4>
-   
-
+ 
+  
+<main>
+  <div class="container">
+   <div class="row justify-content-center mt-5">
+    <ul class="row list-unstyled">
+     <% for(var i=0; i<paintings.length; i++) {%>
+      <li class="col-6 justify-content-between mt-5">
+    
+       <a> <img class="img-fluid" id="realPainting" src="<%= paintings[i].image%>" >
+        </a>
+       <a> <img class="img-fluid" id="fakePainting" src="<%= paintings[i].fakeImage%>" > </a>
+      </li>
+      <% } %>
+    </ul>
+    <button> press me </button> 
+   </div>
   </div>
- </main>
-
-
+ 
+ <script type="text/javascript" src="js/main.js"></script>
+ </main> 
  <%- include('partials/footer') -%>
