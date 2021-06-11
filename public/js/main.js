@@ -1,5 +1,25 @@
-let fakes = document.querySelectorAll("#fakePainting")
-let real = document.querySelectorAll("#realPainting")
+const fakes = document.querySelectorAll("#fakePainting")
+const real = document.querySelectorAll("#realPainting")
+const startButton = document.getElementById('start-btn')
+const nextButton = document.getElementById('next-btn')
+const questionContainerElement = document.getElementById("question-container")
+
+let shuffledQuestions, currentQuestionIndex
+
+startButton.addEventListener("click", startGame)
+nextButton.addEventListener('click', ()=> {
+ currentQuestionIndex++
+ setNextQuestion()
+})
+
+// function startGame() {
+//   startButton.classList.add('hide')
+//   questionContainerElement.classList.remove('hide')
+// }
+
+// function shuffle(array) {
+//   array.sort(() => Math.random() - 0.5);
+// }
 
 // function realOrFake() {
 // if(fakes){
@@ -7,6 +27,9 @@ let real = document.querySelectorAll("#realPainting")
 // }else{
 //   alert("Buy quick, it's real!")
 // }
+// }
+// module.exports = {
+//     shuffle: shuffle,
 // }
 
 for (let i in fakes) {
@@ -20,22 +43,3 @@ for (let i in real) {
     alert("But quick, this is the real deal!!!");
   };
 }
-
-// var comment = document.getElementsByClassName("button");
-
-// function showComment() {
-//   var place = document.getElementById('textfield');
-//   var commentBox = document.createElement('textarea');
-//   place.appendChild(commentBox);
-// }
-
-// for (var i in comment) {
-//   comment[i].onclick = function() {
-//     showComment();
-//   };
-// }
-
-// let elements = document.getElementsByClassName('');
-// for(var i=0; i<elements.length; i++) { 
-//   realOrFake();
-// }

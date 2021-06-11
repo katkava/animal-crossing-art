@@ -11,6 +11,7 @@ const connectDB = require("./config/database");
 const mainRoutes = require("./routes/main");
 const postRoutes = require("./routes/posts");
 const paintingRoutes = require("./routes/paintings")
+engine = require('ejs-mate'),
 
 
 
@@ -23,8 +24,10 @@ require("./config/passport")(passport);
 //Connect To Database
 connectDB();
 
+app.engine('ejs', engine);
 //Using EJS for views
 app.set("view engine", "ejs");
+
 
 //Static Folder
 app.use(express.static("public"));
