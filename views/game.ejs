@@ -8,7 +8,10 @@
    <div id="answer-buttons"class="row justify-content-center mt-5">
     <ul class="row list-unstyled">
       
-     <div id="changePainting"> </div> 
+     <div id="painting1"> </div> 
+     <div id="painting2"> </div>
+     <h3></h3>
+     <h4></h4>
 
     
         
@@ -23,59 +26,95 @@
   </div>
     <div class="controls">
       <button id="start-btn" class="start-btn btn">Start</button>
-     <!-- <button id="next-btn" onclick="<%randomIndex = Math.floor(Math.random() * paintings.length)%>" class="next-btn btn hide">Next</button> -->
+    <button id="next-btn" class="next-btn btn hide">Next</button>
       <!-- add ejs to reload the page here in the button tag, on button click change variables-->
     </div>
 </div> 
  
 <script>  
-var paintings = <%- JSON.stringify(paintings)%>
+const paintings = <%- JSON.stringify(paintings)%>
 //  <script type="text/javascript" src="js/main.js"> 
-  const fakes = document.querySelectorAll("#fakePainting")
-    const real = document.querySelectorAll("#realPainting")
+  
     const startButton = document.getElementById('start-btn')
     const nextButton = document.getElementById('next-btn')
     const questionContainerElement = document.getElementById("question-container")
-
-    let currentQuestionIndex
+    let score = 0 
+    let questionNumber = 0
+    // const choice = document.getElementsByClassName('pix')
+   
 
     startButton.addEventListener("click", startGame)
-    nextButton.addEventListener("click", nextPaintings)
-
+    nextButton.addEventListener("click", checkIfGameComplete) 
+    document.addEventListener('click', checkPainting)
+  
+  
+  
  function randomIndex() {
 
     let randomIndex = Math.floor(Math.random() * paintings.length);
     let paintSource = paintings[randomIndex].image;
-    painting1 = '<img class="img-fluid" id="realPainting" src="' + paintSource + '">';
-    $('#changePainting').html(painting1)
-  }   
+    let fakeSource = paintings[randomIndex].fakeImage;
+   fakeDescription = paintings[randomIndex].fakeDescription;
+    
+   painting1 = '<img class="img-fluid" src="' + paintSource + '">';
+   painting2 = '<img class="img-fluid" src="' + fakeSource + '">';
+    
+    $('#painting1').append('<div id = "real">' + painting1 + '</div>')
+    $('#painting2').append('<div id = "fake">' + painting2 + '</div>')  
+  }    
+
   function startGame() {
-     randomIndex()
-    // startButton.classList.add('hide')
+    startButton.classList.add('hide')
     questionContainerElement.classList.remove('hide')
     nextButton.classList.remove('hide')
     console.log(paintings)
-  }
-  
- 
-    
-  
-  function nextPaintings(painting) {
-   
-    randomIndex
+    randomIndex() 
+    checkPainting(event) 
   }
 
-  for (let i in fakes) {
-      fakes[i].onclick = function () {
-        alert("this is fake!!");
-      };
+
+
+  function checkPainting(event) {
+      if (event.target.id == "real" || event.target.closest('#real')) {
+        score++
+        $('h3').html(`Yay, this is the real deal! ${fakeDescription}. Your score ${score}`)
+        
+      }else if(event.target.id == "fake" || event.target.closest('#fake')){
+        $('h3').html(`Oh no, Redd's got you! ${fakeDescription}. Your score ${score}`)
+      }  
     } 
 
-    for (let i in real) {
-      real[i].onclick = function () {
-        alert("But quick, this is the real deal!!!");
-      };
+    function checkIfGameComplete() {
+      questionNumber++
+      console.log(questionNumber)
+      if(questionNumber < 5) {
+        nextPaintings()
+      }else{
+        endGame()
+      }
     }
+
+  function nextPaintings(painting) {
+      $('#painting1').empty(painting1)
+      $('#painting2').empty(painting2)
+      $('h3').empty(fakeDescription)
+      randomIndex()
+    }  
+
+   function endGame() {
+     $('#painting1').empty(painting1)
+     $('#painting2').empty(painting2)
+     $('h3').empty(fakeDescription)
+     $('h4').html(`Congrats on finishing the game, you got ${score}/5 correct`)
+   }
+
+    
+ 
+  // make array, records each try that takes in what has been returned, if it's in array, run random again,  
+    // client side tables to keep track 
+    //conclusion page. 
+  
+  
 
 </script>
  </main> 
