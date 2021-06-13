@@ -7,9 +7,10 @@
     <div id="question-container" class="hide">
    <div id="answer-buttons"class="row justify-content-center mt-5">
     <ul class="row list-unstyled">
-      
+      <div id="bothPainting">
      <div id="painting1"> </div> 
      <div id="painting2"> </div>
+      </div>
      <h3></h3>
      <h4></h4>
 
@@ -40,18 +41,26 @@ const paintings = <%- JSON.stringify(paintings)%>
     const questionContainerElement = document.getElementById("question-container")
     let score = 0 
     let questionNumber = 0
-    // const choice = document.getElementsByClassName('pix')
-   
+    var previousPainting = [6, 6, 6, 6]
 
     startButton.addEventListener("click", startGame)
     nextButton.addEventListener("click", checkIfGameComplete) 
     document.addEventListener('click', checkPainting)
   
   
-  
  function randomIndex() {
+  // let randomIndex = painting.map(x => { return { paintings: x, srt: Math.random() } }).sort((a, b) => { return a.srt - b.srt }).map(x => x.paintings);
+     let randomNum = Math.floor(Math.random()*2)  
+     let randomIndex = Math.floor(Math.random() * paintings.length);
 
-    let randomIndex = Math.floor(Math.random() * paintings.length);
+     while(previousPainting.includes(randomIndex)){
+       randomIndex = Math.floor(Math.random() * paintings.length);
+     }
+       previousPainting[questionNumber] = randomIndex
+     
+    //  let randomIndex = sort(() => Math.random() - .5)
+
+    if(randomNum == 1) {
     let paintSource = paintings[randomIndex].image;
     let fakeSource = paintings[randomIndex].fakeImage;
    fakeDescription = paintings[randomIndex].fakeDescription;
@@ -61,7 +70,20 @@ const paintings = <%- JSON.stringify(paintings)%>
     
     $('#painting1').append('<div id = "real">' + painting1 + '</div>')
     $('#painting2').append('<div id = "fake">' + painting2 + '</div>')  
-  }    
+     } else {
+        let fakeSource = paintings[randomIndex].image;
+        let paintSource = paintings[randomIndex].fakeImage;
+      fakeDescription = paintings[randomIndex].fakeDescription;
+
+      painting1 = '<img class="img-fluid" src="' + paintSource + '">';
+      painting2 = '<img class="img-fluid" src="' + fakeSource + '">';
+
+      $('#painting1').append('<div id = "fake">' + painting1 + '</div>')
+      $('#painting2').append('<div id = "real">' + painting2 + '</div>')
+     } 
+    }  
+     
+     //create 1 variable, randomises between 1 and 0, if it equals 1 do it this way, if it's 0, do it the other way. 
 
   function startGame() {
     startButton.classList.add('hide')
@@ -72,9 +94,10 @@ const paintings = <%- JSON.stringify(paintings)%>
     checkPainting(event) 
   }
 
+  
 
-
-  function checkPainting(event) {
+  function checkPainting(event) { 
+      
       if (event.target.id == "real" || event.target.closest('#real')) {
         score++
         $('h3').html(`Yay, this is the real deal! ${fakeDescription}. Your score ${score}`)
@@ -85,16 +108,18 @@ const paintings = <%- JSON.stringify(paintings)%>
     } 
 
     function checkIfGameComplete() {
-      questionNumber++
       console.log(questionNumber)
-      if(questionNumber < 5) {
+      if(questionNumber < 3 ) {
         nextPaintings()
       }else{
         endGame()
       }
-    }
+    } 
 
-  function nextPaintings(painting) {
+  
+  
+  function nextPaintings() {
+    questionNumber++
       $('#painting1').empty(painting1)
       $('#painting2').empty(painting2)
       $('h3').empty(fakeDescription)
@@ -105,7 +130,7 @@ const paintings = <%- JSON.stringify(paintings)%>
      $('#painting1').empty(painting1)
      $('#painting2').empty(painting2)
      $('h3').empty(fakeDescription)
-     $('h4').html(`Congrats on finishing the game, you got ${score}/5 correct`)
+     $('h4').html(`Congrats on finishing the game, you got ${score}/4 correct`)
    }
 
     
