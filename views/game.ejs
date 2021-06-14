@@ -13,21 +13,13 @@
       </div>
      <h3></h3>
      <h4></h4>
-
-    
-        
-<!-- <% function randomIndex() { %> 
-
-<% let randomIndex = Math.floor(Math.random() * paintings.length); %>; 
- <% let painting1 = '<img class="img-fluid" id="realPainting" src="paintings[randomIndex].image">'; %> 
-  <% $('#changePainting').html(painting1) %> 
-  <% } %>  -->
     </ul>
     </div>
   </div>
     <div class="controls">
       <button id="start-btn" class="start-btn btn">Start</button>
-    <button id="next-btn" class="next-btn btn hide">Next</button>
+    <button id="next-btn" class="next-btn btn hide">Next</button> 
+    <a id="restart-btn" class="restart-btn btn hide" href="/game">Play again!</a>
       <!-- add ejs to reload the page here in the button tag, on button click change variables-->
     </div>
 </div> 
@@ -116,8 +108,6 @@ const paintings = <%- JSON.stringify(paintings)%>
       }
     } 
 
-  
-  
   function nextPaintings() {
     questionNumber++
       $('#painting1').empty(painting1)
@@ -130,7 +120,9 @@ const paintings = <%- JSON.stringify(paintings)%>
      $('#painting1').empty(painting1)
      $('#painting2').empty(painting2)
      $('h3').empty(fakeDescription)
-     $('h4').html(`Congrats on finishing the game, you got ${score}/4 correct`)
+     $('h4').html(`Congrats on finishing the game, you got ${score}/4 correct`) 
+     $('#restart-btn').removeClass('hide')
+     $('#next-btn').addClass('hide')
    }
 
     
