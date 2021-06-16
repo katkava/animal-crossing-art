@@ -23,7 +23,6 @@ module.exports = {
     try {
       const paintings = await Painting.find().sort({ year: "desc" }).lean();
       res.render("game.ejs", { paintings: paintings, name: req.name, artist: req.artist });
-      console.log(paintings);
     } catch (err) {
       console.log(err);
     }
