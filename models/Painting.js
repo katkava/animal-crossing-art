@@ -3,30 +3,30 @@ const mongoose = require("mongoose");
 const PaintingSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: true
-    },
+    required: true,
+  },
   artist: {
     type: String,
-    required: true
+    required: true,
   },
   year: {
     type: String,
-    required: true
+    required: true,
   },
   image: {
     type: String,
-    required: true
+    required: true,
   },
   details: {
     type: String,
-    required: true
+    required: true,
   },
   fakeImage: {
-    type: String
+    type: String,
   },
   fakeDescription: {
-    type: String
-  }
+    type: String,
+  },
 });
 
 module.exports = mongoose.model("Painting", PaintingSchema);

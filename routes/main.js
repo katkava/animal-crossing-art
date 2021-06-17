@@ -11,7 +11,7 @@ router.get("/", homeController.getIndex);
 router.get("/gallery3d", homeController.getGallery3d);
 router.get("/community", homeController.getCommunity);
 
-//routes for Community login 
+//routes for Community login
 router.get("/profile", ensureAuth, postsController.getProfile);
 router.get("/feed", ensureAuth, postsController.getFeed);
 router.get("/login", authController.getLogin);
@@ -20,7 +20,7 @@ router.get("/logout", authController.logout);
 router.get("/signup", authController.getSignup);
 router.post("/signup", authController.postSignup);
 
-//routes for paintings 
+//routes for paintings
 router.get("/learn", paintingsController.getLearn);
 router.get("/game", paintingsController.getGame);
 

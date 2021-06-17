@@ -10,13 +10,10 @@ const logger = require("morgan");
 const connectDB = require("./config/database");
 const mainRoutes = require("./routes/main");
 const postRoutes = require("./routes/posts");
-const paintingRoutes = require("./routes/paintings")
-engine = require('ejs-mate'),
-
-
-
-//Use .env file in config folder
-require("dotenv").config({ path: "./config/.env" });
+const paintingRoutes = require("./routes/paintings");
+(engine = require("ejs-mate")),
+  //Use .env file in config folder
+  require("dotenv").config({ path: "./config/.env" });
 
 // Passport config
 require("./config/passport")(passport);
@@ -24,15 +21,14 @@ require("./config/passport")(passport);
 //Connect To Database
 connectDB();
 
-app.engine('ejs', engine);
+app.engine("ejs", engine);
 //Using EJS for views
 app.set("view engine", "ejs");
 
-
 //Static Folder
 app.use(express.static("public"));
-app.use('/css', express.static(__dirname + 'public/css'))
-app.use('/js', express.static(__dirname + 'public/js'))
+app.use("/css", express.static(__dirname + "public/css"));
+app.use("/js", express.static(__dirname + "public/js"));
 
 //Body Parsing
 app.use(express.urlencoded({ extended: true }));
@@ -64,8 +60,7 @@ app.use(flash());
 //Setup Routes For Which The Server Is Listening
 app.use("/", mainRoutes);
 app.use("/post", postRoutes);
-app.use("/painting", paintingRoutes)
-
+app.use("/painting", paintingRoutes);
 
 //Server Running
 app.listen(process.env.PORT, () => {

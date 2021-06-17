@@ -2,11 +2,14 @@ const Painting = require("../models/Painting");
 // const response = require("v-response")
 
 module.exports = {
-  
   getLearn: async (req, res) => {
     try {
       const paintings = await Painting.find().sort({ year: "desc" }).lean();
-      res.render("learn.ejs", { paintings: paintings, name: req.name, artist: req.artist });
+      res.render("learn.ejs", {
+        paintings: paintings,
+        name: req.name,
+        artist: req.artist,
+      });
     } catch (err) {
       console.log(err);
     }
@@ -14,7 +17,11 @@ module.exports = {
   getPainting: async (req, res) => {
     try {
       const painting = await Painting.findById(req.params.id);
-      res.render("painting.ejs", { painting: painting, name: req.name, artist: req.artist });
+      res.render("painting.ejs", {
+        painting: painting,
+        name: req.name,
+        artist: req.artist,
+      });
     } catch (err) {
       console.log(err);
     }
@@ -22,7 +29,11 @@ module.exports = {
   getGame: async (req, res) => {
     try {
       const paintings = await Painting.find().sort({ year: "desc" }).lean();
-      res.render("game.ejs", { paintings: paintings, name: req.name, artist: req.artist });
+      res.render("game.ejs", {
+        paintings: paintings,
+        name: req.name,
+        artist: req.artist,
+      });
     } catch (err) {
       console.log(err);
     }
@@ -30,7 +41,7 @@ module.exports = {
   // createPainting = (req, res) => {
   //     // Upload image to cloudinary
   //     let painting_body = req.body;
-  //     const new_painting = new Painting_model(painting_body); 
+  //     const new_painting = new Painting_model(painting_body);
   //     new_painting.save()
   //       .then(saved => {
   //         if(!saved) {
@@ -44,6 +55,6 @@ module.exports = {
   //       }).catch(error => {
   //         return res.status(500)
   //         .json(reponse.ApiResponse(false, 500, "oops an error occurred", undefined, error))
-  //       }) 
+  //       })
   // },
 };
