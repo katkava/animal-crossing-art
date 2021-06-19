@@ -1,16 +1,16 @@
-const fakes = document.querySelectorAll("#fakePainting");
-const real = document.querySelectorAll("#realPainting");
-const startButton = document.getElementById("start-btn");
-const nextButton = document.getElementById("next-btn");
-const questionContainerElement = document.getElementById("question-container");
+// const fakes = document.querySelectorAll("#fakePainting");
+// const real = document.querySelectorAll("#realPainting");
+// const startButton = document.getElementById("start-btn");
+// const nextButton = document.getElementById("next-btn");
+// const questionContainerElement = document.getElementById("question-container");
 
-let shuffledQuestions, currentQuestionIndex;
+// let shuffledQuestions, currentQuestionIndex;
 
-startButton.addEventListener("click", startGame);
-nextButton.addEventListener("click", () => {
-  currentQuestionIndex++;
-  setNextQuestion();
-});
+// startButton.addEventListener("click", startGame);
+// nextButton.addEventListener("click", () => {
+//   currentQuestionIndex++;
+//   setNextQuestion();
+// });
 
 // function startGame() {
 //   startButton.classList.add('hide')
@@ -32,14 +32,21 @@ nextButton.addEventListener("click", () => {
 //     shuffle: shuffle,
 // }
 
-for (let i in fakes) {
-  fakes[i].onclick = function () {
-    alert("this is fake!!");
-  };
-}
+// for (let i in fakes) {
+//   fakes[i].onclick = function () {
+//     alert("this is fake!!");
+//   };
+// }
 
-for (let i in real) {
-  real[i].onclick = function () {
-    alert("But quick, this is the real deal!!!");
-  };
-}
+// for (let i in real) {
+//   real[i].onclick = function () {
+//     alert("But quick, this is the real deal!!!");
+//   };
+// }
+
+// var activeNavItem = $('.nav-item');
+
+// activeNavItem.click(function(){
+//   activeNavItem.removeClass('active');
+//   $(this).addClass('active');  
+// });
