@@ -11,9 +11,8 @@ const connectDB = require("./config/database");
 const mainRoutes = require("./routes/main");
 const postRoutes = require("./routes/posts");
 const paintingRoutes = require("./routes/paintings");
-(engine = require("ejs-mate")),
   //Use .env file in config folder
-  require("dotenv").config({ path: "./config/.env" });
+require("dotenv").config({ path: "./config/.env" });
 
 // Passport config
 require("./config/passport")(passport);
@@ -21,7 +20,6 @@ require("./config/passport")(passport);
 //Connect To Database
 connectDB();
 
-app.engine("ejs", engine);
 //Using EJS for views
 app.set("view engine", "ejs");
 
