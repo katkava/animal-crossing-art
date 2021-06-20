@@ -84,17 +84,23 @@ const paintings = <%- JSON.stringify(paintings)%>
     checkPainting(event) 
   }
 
+// function removeEvent() {
+//     // do things, then
+//     removeEventListener('click', foo);
+// }
   
 
-  function checkPainting(event) { 
-      
-      if (event.target.id == "real" || event.target.closest('#real')) {
-        score++
+  function checkPainting(event) {  
+     
+
+    if (event.target.id == "real" || event.target.closest('#real')) {
+        score+=1
         $('h3').html(`Yay, this is the real deal! ${fakeDescription}. Your score ${score}`)
-        
+  
       }else if(event.target.id == "fake" || event.target.closest('#fake')){
         $('h3').html(`Oh no, Redd's got you! ${fakeDescription}. Your score ${score}`)
-      }  
+      }   
+      
     } 
 
     function checkIfGameComplete() {
