@@ -1,36 +1,38 @@
 <%- include('partials/header') -%>
 
-    
+    <section class="welcomeHomepage">
     <div class="welcome container-fluid">
-     <div class="row">
-     <div class="col-sm">
-        <h1 >Hey there !!!</h1>
+     <div class="row d-sm-flex">
+     <div class="col-sm-2  align-self-start">
+        <h1 >Hey there!</h1>
     </div> 
-    <div class="col-sm">
-        <p class="align-middle"> Animal Crossing Art is a platform to explore the artistic side of your favourite game. Learn real art history about the paintings in New Horizons, plays games to see if you can spot the fakes sold by Redd, and join our community to show off your own creations! </p>
+    <div class="col-sm-6 align-self-center">
+        <p> Welcome to <span class="textHighlight">Animal Crossing Art</span>! Here you can explore the artistic side of your favourite game. Learn real art history about the paintings in New Horizons, plays games to see if you can spot the fakes sold by Redd, and join our community to show off your own creations! </p>
     </div> 
-     <div class="tom col-sm">    
-        <img class="img-fluid" src="images/tomnook-rotate.png" alt="Tom Nook"/>
+     <div class="tom col-sm-4">    
+        <img class="img-fluid d-none d-sm-block float-right" src="images/tomnook-rotate-5.png" alt="Tom Nook"/>
+         <img class="d-sm-none float-right w-50" src="images/tomnook.png"><!-- Image to show on extra small screen (mobile portrait) -->
     </div>
     </div> 
     </div> 
+    </welcomeHomepage>
     
 
-    </div>
-    <div class="game">
-    <!-- <div class="row justify-content-around mt-5"> -->
-        <!-- <a href="/game" class="col-3 btn btn-primary"> Play Spot the fake</a>
+
+ 
+    <div class="row justify-content-around mt-5"> 
+     <a href="/game" class="col-3 btn btn-primary"> Play Spot the fake</a>
     </div>
     <div class="gallery3d">
         <a href="/gallery3d" class="col-3 btn btn-primary"> Visit Gallery</a>
-    </div> -->
-    <!-- <div class="row justify-content-around mt-5"> -->
-    <!-- <div class="learn">
+    </div>
+    <div class="row justify-content-around mt-5">
+    <div class="learn">
         <a href="/learn" class="col-3 btn btn-primary"> Learn about the art history</a>
     </div>
     <div class="community">
         <a href="/community" class="col-3 btn btn-primary"> Join the Community</a>
-    </div> -->
+    </div>
     
 
 <%- include('partials/footer') -%>
