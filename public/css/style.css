@@ -26,13 +26,19 @@ font-weight: 500;
 font-size: 1.2em;
 color: rgba(218, 127, 21);
 }
+
+/*-------- main body styles -----------*/
+
+body {
+  overflow-x: hidden;
+}
 /* ------ Navbar ----------------  */
 
 .hide {
   display: none;
 }  
 
-.navbar-brand {
+.navbar-brand, .gameWelcome-section h2 {
 font-family: FinkHeavy;
 font-style: normal;
 font-weight: 500;
@@ -48,7 +54,6 @@ mix-blend-mode: normal;
 
 -webkit-text-stroke-color: #9E5500;
 -webkit-text-stroke-width: 2.00px; ;
-transform: rotate(0.25deg);
 } 
 
 /* Set the border color to the desired color */
@@ -126,39 +131,55 @@ a.nav-link:hover{
 /*------------- Homepage ---------------*/
 
 
-
 p {
-  
-
-position: relative;
-font-family: 'Amatic SC', sans-serif;
-font-style: normal;
-font-weight: 500;
-font-size: 30px;
-line-height: 30px;
-
-color: #000000;
-
+  position: relative;
+  font-family: 'Amatic SC', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 30px;
+  color: #000000;
 }
 
-.welcome h1 {
-
-
-font-family: FinkHeavy;
-font-style: normal;
-font-weight: 500;
-font-size: 5em;
-padding-right: 20px;
-
-color: #000000;
-
-transform: rotate(0.25deg);
-
+.welcome h1, .btn-primary {
+  font-family: FinkHeavy;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 5em;
+  padding-right: 20px;
+  color: #000000;
 } 
 
 .tom {
   padding: 0;
+} 
+
+
+/*---- Homepage Game Section ----*/
+
+.redd {
+  padding: 2%;
 }
+
+.gameWelcome-section {
+  background-image: url("/images/background1.jpg");
+  background-size: cover 100%;
+}
+
+.gameWelcome-section h2 {
+font-size: 6.5em;
+
+} 
+
+.btn-primary {
+ height: 50px;
+ background-color: white;
+ border: 3px solid #9E5500;
+ font-size: 3em;
+ border-radius: 10px;
+
+}
+
 
 
 //Media Queries for responsiveness
