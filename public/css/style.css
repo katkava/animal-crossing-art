@@ -141,7 +141,7 @@ p {
   color: #000000;
 }
 
-.welcome h1, .btn-primary {
+.welcome h1, .btn-primary, h3{
   font-family: FinkHeavy;
   font-style: normal;
   font-weight: 500;
@@ -164,6 +164,7 @@ p {
 .gameWelcome-section {
   background-image: url("/images/background1.jpg");
   background-size: cover 100%;
+  padding-top: 5%;
 }
 
 .gameWelcome-section h2 {
@@ -178,6 +179,19 @@ font-size: 6.5em;
  font-size: 3em;
  border-radius: 10px;
 
+}
+
+.btn-primary:hover {
+  background-color: #9E5500;
+  border: 3px solid white;
+} 
+
+
+.gameWelcome-section p {
+  background-color: white;
+  border-radius: 10px;
+  padding: 5%;
+  margin: 10%;
 }
 
 
