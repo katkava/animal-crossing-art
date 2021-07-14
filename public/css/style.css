@@ -31,6 +31,7 @@ color: rgba(218, 127, 21);
 
 body {
   overflow-x: hidden;
+  letter-spacing: 2px;
 }
 /* ------ Navbar ----------------  */
 
@@ -43,15 +44,8 @@ font-family: FinkHeavy;
 font-style: normal;
 font-weight: 500;
 font-size: 3.5em;
-
-/* MainTheme */
-
 color: rgba(218, 127, 21, 0.53);
-
 mix-blend-mode: normal;
-/* MainTheme */
-
-
 -webkit-text-stroke-color: #9E5500;
 -webkit-text-stroke-width: 2.00px; ;
 } 
@@ -141,7 +135,7 @@ p {
   color: #000000;
 }
 
-.welcome h1, .btn-primary, h3{
+.welcome h1, .btn-primary, .btn-secondary, h3, h2{
   font-family: FinkHeavy;
   font-style: normal;
   font-weight: 500;
@@ -157,23 +151,27 @@ p {
 
 /*---- Homepage Game Section ----*/
 
-.redd {
+.redd  {
   padding: 2%;
 }
 
-.gameWelcome-section {
+
+
+.gameWelcome-section, .learn-section {
   background-image: url("/images/background1.jpg");
   background-size: cover 100%;
   padding-top: 5%;
 }
 
-.gameWelcome-section h2 {
+.gameWelcome-section h2, .learn-section h2 {
 font-size: 6.5em;
 
 } 
 
-.btn-primary {
- height: 50px;
+
+
+.btn-primary, .btn-secondary {
+ height: auto;
  background-color: white;
  border: 3px solid #9E5500;
  font-size: 3em;
@@ -181,7 +179,13 @@ font-size: 6.5em;
 
 }
 
-.btn-primary:hover {
+.btn-secondary {
+  background-image: url("/images/background1.jpg");
+  color:black;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+  background-image: none;
   background-color: #9E5500;
   border: 3px solid white;
 } 
@@ -195,7 +199,30 @@ font-size: 6.5em;
 }
 
 
+/*---- Homepage Gallery Blathers Section ----*/
+.blathers {
+  padding: 2%;
+  padding-bottom: 50px;
+  margin-top: -50px;}
 
+
+  .vermeergif {
+    padding-left: 5%;
+  }
+
+.learn-section p {
+  background-color: white;
+  border-radius: 10px;
+  padding: 5%;
+}
+
+.learn-section h2 {
+  padding-right: 0;
+} 
+
+.learn-section {
+  padding-bottom: 5%;
+}
 //Media Queries for responsiveness
 
 
