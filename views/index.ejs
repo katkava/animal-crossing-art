@@ -1,7 +1,8 @@
 <%- include('partials/header') -%>
 
-    <div class="welcome container-fluid bg-welcome">
-     <div class="row d-sm-flex">
+<section class="welcome pl-5 pt-5">
+    <div class="bg-welcome">
+     <div class="row d-md-flex">
      <div class="col-sm-2  align-self-start">
         <h1>Hey there!</h1>
     </div> 
@@ -14,13 +15,19 @@
     </div>
     </div> 
     </div> 
-     
-    <div class="container-fluid gameWelcome-section">
+     </section>
+
+
+     <section class="gameWelcome-section pl-5 pt-5">
+    <div class="container-fluid">
     <div class="row d-sm-flex">
-    <div class="redd col-sm-4 ">    
-        <img class="img-fluid center-block" src="images/redd-large.png" alt="Redd the Art Dealer"/>
+    <div class="redd col-sm-4 ">   
+        <!-- img-fluid d-none d-sm-block float-lg-right  -->
+        <img class="img-fluid  d-none d-sm-block  center-block" src="images/redd-large.png" alt="Redd the Art Dealer"/>
+        <img class="mx-auto d-sm-none d-block w-50" src="images/redd-large.png"/>
          <!-- <img class="d-sm-none float-right w-50" src="images/tomnook.png">Image to show on extra small screen (mobile portrait) -->
     </div>
+    
     <div class="col-sm-2 align-self-center text-center"> 
      <h2>SPOT THE FAKE</h2> 
      <a href="/game" class="btn btn-primary btn-white">Play</a>
@@ -31,40 +38,46 @@
     </div>
     </div>
     </div>
-
+</section>
     
-    <div class= "container-fluid gallery3d-section">
-    <div class="row">
-        <div class="col-md-4 offset-md-1 align-self-center"> 
+
+<section class="gallery3d-section pl-5 pt-5">
+    <div class= "container-fluid ">
+    <div class="row d-sm-flex">
+        <div class="col-md-4 align-self-center"> 
             <div class='row mb-5'>
             <h2>Visit our 3D Gallery! </h2> 
             </div>
             <div class='row mb-5'>
-            <p> Come say “Hi” to Blathers and  explore all the paintings and sculptures in New Horizons from a new perspective!  </p> 
+            <p class="align-self-center"> Come say “Hi” to Blathers and  explore all the paintings and sculptures in New Horizons from a new perspective!  </p> 
             </div>
             <div class='row mb-5'>
             <a href="/gallery3d" class=" btn btn-secondary"> Visit Gallery</a>
         </div>
            </div>
     <div class="blathers col"> 
-        <img class="img-fluid d-none d-sm-block float-right" src="images/blathers-flipped.png" alt="Blathers"/>
+        <img class="img-fluid d-none d-sm-block sm-float-right" src="images/blathers-flipped.png" alt="Blathers"/>
          <img class="d-sm-none float-right w-50" src="images/blathers.png"/>   
     </div>
     </div>
     </div>
-    
+</section>
 
-    <div class= "container-fluid learn-section">
-        <div class="row">
+<section class="learn-section pl-5 pt-5">
+    <div class= "container-fluid ">
+        <div class="row  d-sm-flex">
         <div class="vermeergif col"> 
-            <img class="img-fluid d-none d-sm-block float-left" src="images/vermeergif.gif" alt="Moving image of Girl with a Pearl Earring, Johanesse Vermeer, 1665"/>
-             <img class="d-sm-none float-right w-50" src="images/vermeergif.gif"/>   
+            <img class="img-fluid d-none d-sm-block" src="images/vermeergif.gif" alt="Moving image of Girl with a Pearl Earring, Johanesse Vermeer, 1665"/>
+             
             </div>
         
-            <div class="col-5 align-self-center "> 
+            <div class="col-sm-5 align-self-center "> 
                 <figure class="text-center">
                 <div class='mb-5 col-10'>
                 <h2>Learn about the Art</h2> 
+                </div>
+                <div class="vermeergif"> 
+                <img class="mx-auto d-sm-none w-50" src="images/vermeergif.gif"/>  
                 </div>
                 <div class='mb-5 col-10'>
                 <p> Learn the names of the artists behind the world’s most famous masterpieces and find out some cool art history facts.  </p> 
@@ -76,12 +89,12 @@
          </div>
         </div>
         </div>
-   
+    </section>
 
-
-        <div class= "container-fluid community-section">
-            <div class="row">
-                <div class="col-md-4 offset-md-1 align-self-center"> 
+    <section class="community-section pl-5 pt-5">
+        <div class= "container-fluid ">
+            <div class="row  d-sm-flex">
+                <div class="col-sm-4 align-self-center"> 
                     <div class='row mb-5'>
                     <h2> Show off your own art! </h2> 
                     </div>
@@ -92,13 +105,13 @@
                     <a href="/community" class=" btn btn-secondary">Join in</a>
                 </div>
                    </div>
-            <div class="community-img  offset-md-1 col-6"> 
-                <img class="img-fluid d-none d-sm-block float-right" src="images/artworks-community.png" alt="Fan art"/>
-                 <img class="d-sm-none float-right w-50" src="images/artworks-community.png"/>   
+            <div class="community-img  col-sm-6"> 
+                <img class="img-fluid d-none d-sm-block float-lg-right" src="images/artworks-community.png" alt="Fan art"/>
+                 <img class="mx-auto d-sm-none d-block w-50" src="images/artworks-community.png"/>   
             </div>
             </div>
             </div>
-   
+        </section>
     
 
 <%- include('partials/footer') -%>
