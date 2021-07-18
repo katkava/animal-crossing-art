@@ -45,7 +45,7 @@ body {
 font-family: FinkHeavy;
 font-style: normal;
 font-weight: 500;
-font-size: 3.5em;
+font-size: 3em;
 color: rgba(218, 127, 21, 0.53);
 mix-blend-mode: normal;
 -webkit-text-stroke-color: #9E5500;
@@ -151,9 +151,6 @@ p {
 
 /*---- Homepage Game Section ----*/
 
-.redd  {
-  padding: 2%;
-}
 
 
 
@@ -211,9 +208,7 @@ p {
   padding-right: 0;
 } 
 
-.learn-section {
-  padding-bottom: 5%;
-}
+
 /* //Media Queries for responsiveness
 
 
@@ -221,5 +216,7 @@ p {
  */
 
  @media screen and (max-width: 600px) {
-  
+  .gameWelcome-section h2 {
+    font-size: 40px;
+  }
 }

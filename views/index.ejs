@@ -1,40 +1,41 @@
 <%- include('partials/header') -%>
 
-<section class="welcome pl-5 pt-5">
+<section class="welcome p-5 pr-sm-0">
     <div class="bg-welcome">
      <div class="row d-md-flex">
      <div class="col-sm-2  align-self-start">
         <h1>Hey there!</h1>
     </div> 
     <div class="col-sm-6 align-self-center">
-        <p> Welcome to <span class="textHighlight">Animal Crossing Art</span>! Here you can explore the artistic side of your favourite game. Learn real art history about the paintings in New Horizons, plays games to see if you can spot the fakes sold by Redd, and join our community to show off your own creations! </p>
+        <p class="text-justify"> Welcome to <span class="textHighlight">Animal Crossing Art</span>! Here you can explore the artistic side of your favourite game. Learn real art history about the paintings in New Horizons, plays games to see if you can spot the fakes sold by Redd, and join our community to show off your own creations! </p>
     </div> 
      <div class="tom col-sm-4">    
         <img class="img-fluid d-none d-sm-block float-right" src="images/tomnook-rotate-5.png" alt="Tom Nook"/>
-         <img class="d-sm-none float-right w-50" src="images/tomnook.png"><!-- Image to show on extra small screen (mobile portrait) -->
+         <img class="d-sm-none d-block  mx-auto w-50" src="images/tomnook.png"/>
+         <!-- Image to show on extra small screen (mobile portrait) -->
     </div>
     </div> 
     </div> 
      </section>
 
 
-     <section class="gameWelcome-section pl-5 pt-5">
-    <div class="container-fluid">
+     <section class="gameWelcome-section">
+    <div class="container-fluid p-5">
     <div class="row d-sm-flex">
-    <div class="redd col-sm-4 ">   
+    <div class="redd col-sm-4 "> 
+        <h3 class="text-center d-sm-none"> Can you beat Redd and spot the fake art? </h3>   
         <!-- img-fluid d-none d-sm-block float-lg-right  -->
         <img class="img-fluid  d-none d-sm-block  center-block" src="images/redd-large.png" alt="Redd the Art Dealer"/>
         <img class="mx-auto d-sm-none d-block w-50" src="images/redd-large.png"/>
-         <!-- <img class="d-sm-none float-right w-50" src="images/tomnook.png">Image to show on extra small screen (mobile portrait) -->
     </div>
     
     <div class="col-sm-2 align-self-center text-center"> 
      <h2>SPOT THE FAKE</h2> 
-     <a href="/game" class="btn btn-primary btn-white">Play</a>
+     <a href="/game" class=" btn btn-primary">Play</a>
      </div> 
      <div class="col-sm-5">
-     <h3 class="text-center"> Can you beat Redd and spot the fake art? </h3> 
-     <p class="align-self-center"> Test your detective skills and compete against Redd to find the fake painting and gather skills to buy real art in New Horizons! </p> 
+     <h3 class="d-none d-md-block"> Can you beat Redd and spot the fake art? </h3> 
+     <p class="align-self-center d-none d-md-block"> Test your detective skills and compete against Redd to find the fake painting and gather skills to buy real art in New Horizons! </p> 
     </div>
     </div>
     </div>
@@ -55,7 +56,7 @@
             <a href="/gallery3d" class=" btn btn-secondary"> Visit Gallery</a>
         </div>
            </div>
-    <div class="blathers col"> 
+    <div class="blathers"> 
         <img class="img-fluid d-none d-sm-block sm-float-right" src="images/blathers-flipped.png" alt="Blathers"/>
          <img class="d-sm-none float-right w-50" src="images/blathers.png"/>   
     </div>
@@ -63,26 +64,26 @@
     </div>
 </section>
 
-<section class="learn-section pl-5 pt-5">
+<section class="learn-section pl-md-5 pt-5 pb-5 pr-lg-5">
     <div class= "container-fluid ">
-        <div class="row  d-sm-flex">
+        <div class="row d-md-flex">
         <div class="vermeergif col"> 
-            <img class="img-fluid d-none d-sm-block" src="images/vermeergif.gif" alt="Moving image of Girl with a Pearl Earring, Johanesse Vermeer, 1665"/>
+            <img class="img-fluid d-none d-md-block" src="images/vermeergif.gif" alt="Moving image of Girl with a Pearl Earring, Johanesse Vermeer, 1665"/>
              
             </div>
         
-            <div class="col-sm-5 align-self-center "> 
+            <div class="col-md-5 align-self-center "> 
                 <figure class="text-center">
-                <div class='mb-5 col-10'>
+                <div class='mb-5 col-12'>
                 <h2>Learn about the Art</h2> 
                 </div>
                 <div class="vermeergif"> 
-                <img class="mx-auto d-sm-none w-50" src="images/vermeergif.gif"/>  
+                <img class="mx-auto d-md-none" src="images/vermeergif.gif"/>  
                 </div>
-                <div class='mb-5 col-10'>
+                <div class='mb-5 col-12 mt-5'>
                 <p> Learn the names of the artists behind the world’s most famous masterpieces and find out some cool art history facts.  </p> 
                 </div>
-                <div class='mb-5 col-10'>
+                <div class='mb-5 col-12'>
                 <a href="/learn" class=" btn btn-primary"> Find out more!</a>
             </figure>
             </div>
