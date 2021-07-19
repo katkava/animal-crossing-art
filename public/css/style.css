@@ -187,16 +187,17 @@ p {
   background-color: white;
   border-radius: 10px;
   padding: 5%;
-  margin: 10%;
 }
 
 
 /*---- Homepage Gallery Blathers Section ----*/
 .blathers {
   padding-bottom: 50px;
-  margin-top: -50px;}
+  margin-top: -80px;}
 
-
+  .gallery3d-section .text-block {
+    margin-top: 50px;
+  }
 
 
 .learn-section p {
@@ -208,7 +209,9 @@ p {
   padding-right: 0;
 } 
 
-
+.gameWelcome-section h2 {
+  font-size: 50px;
+}
 /* //Media Queries for responsiveness
 
 
@@ -216,6 +219,10 @@ p {
  */
 
  @media screen and (max-width: 600px) {
+  .welcome h1, .btn-primary, .btn-secondary, h3, h2 {
+    font-size: 30px;
+  }
+  
   .gameWelcome-section h2 {
     font-size: 40px;
   }
@@ -223,19 +230,26 @@ p {
   .blathers {
     padding-bottom: 0px;
     margin-left: -60px;
-    margin-top: -90px;
+    margin-top: -50px;
+  
   }
+
+  .gallery3d-section .text-block {
+    margin-top: 0px;
+  }
+
 
   .gallery3d-section .btn {
     margin-top: 20px;
   }
 
-  .community-img {
-    padding-bottom: 0px;
-    margin-right: -100px;
-  }
-
   .vermeergif {
     padding: 0px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 800px) {
+ .welcome h1, .btn-primary, .btn-secondary, h3, h2 {
+    font-size: 30px;
   }
 }
