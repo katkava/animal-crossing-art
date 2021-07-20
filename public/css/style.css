@@ -212,6 +212,10 @@ p {
 .gameWelcome-section h2 {
   font-size: 50px;
 }
+
+.navbar-brand {
+  font-size: 25px;
+}
 /* //Media Queries for responsiveness
 
 
