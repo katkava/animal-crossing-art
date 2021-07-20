@@ -250,10 +250,35 @@ p {
   .vermeergif {
     padding: 0px;
   }
+
+  .community-section {
+    overflow: hidden;
+  }
+
+  .community-section .btn {
+    margin-top: -30px;
+  }
+.community-img {
+  margin-right: -120px;
+  height: 400px;
+  margin-top: -20px;
+  margin-bottom: -40px;
+  
+}
+  .community-img img{
+   
+    width: auto;
+    height: 300px;
+    
+    
+  }
+
+
 }
 
-@media (min-width: 600px) and (max-width: 800px) {
+@media (min-width: 601px) and (max-width: 800px) {
  .welcome h1, .btn-primary, .btn-secondary, h3, h2 {
     font-size: 30px;
   }
+
 }
