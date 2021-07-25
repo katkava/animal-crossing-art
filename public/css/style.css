@@ -41,7 +41,7 @@ body {
   display: none;
 }  
 
-.navbar-brand, .gameWelcome-section h2 {
+.navbar-brand, .gameWelcome-section h2, .gallery-3d h1 {
 font-family: FinkHeavy;
 font-style: normal;
 font-weight: 500;
@@ -49,7 +49,7 @@ font-size: 3em;
 color: rgba(218, 127, 21, 0.53);
 mix-blend-mode: normal;
 -webkit-text-stroke-color: #9E5500;
--webkit-text-stroke-width: 2.00px; ;
+-webkit-text-stroke-width: 2.00px;
 } 
 
 /* Set the border color to the desired color */
@@ -216,11 +216,20 @@ p {
 .navbar-brand {
   font-size: 25px;
 }
-/* //Media Queries for responsiveness
+/* //Media Queries for responsiveness*/
 
+.holds-the-iframe{
+ 
+    background:url("../images/blathers.gif") center center no-repeat;
+    border-radius: 5px;
+  }
 
-// Medium devices (tablets, 768px and up)
- */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/* // Medium devices (tablets, 768px and up)
+ */ 
 
  @media screen and (max-width: 600px) {
   .welcome h1, .btn-primary, .btn-secondary, h3, h2 {

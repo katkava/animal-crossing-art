@@ -1,12 +1,25 @@
 <%- include('partials/header') -%>
 
  <main>
-  <h1>Enter 3D immersive experience with Animal Crossing </h1>
-  <div class="row justify-content-around mt-5">
-   <iframe src="https://hubs.mozilla.com/trGEeGs?embed_token=032e52749d675ce880f4a038330e444c" style="width: 1024px; height: 768px;" allow="microphone; camera; vr; speaker;"></iframe>
-   <h4> If you don't see the room loading above, we got you! Try clicking this button </h4>
-   <a href="https://hub.link/trGEeGs" class="col-3 btn btn-primary">LET ME IN</a>
+    <section class="gallery-3d mt-5">
+       <div class="container-fluid p-5">
+         <div class="text-center">
+            <h1>Enter a 3D immersive experience with Animal Crossing </h1>
+        </div> 
+  
+  
+    <div class="row d-flex justify-content-center holds-the-iframe">
+       <iframe src="https://hubs.mozilla.com/trGEeGs?embed_token=032e52749d675ce880f4a038330e444c" style="width: 700px; height: 420px; border-style: none" allow="microphone; camera; vr; speaker;" class="d-none d-sm-block"></iframe>
+       <img src="images/blathers.gif" class="d-block d-sm-none" />
+    </div>
+    <div class="row d-flex justify-content-center m-5">
+   <h4 class="justify-text-center"> If you don't see the room loading above, we got you! Try clicking the button below</h4>
+    </div>
+    <div class="row d-flex justify-content-center">
+   <a href="https://hub.link/trGEeGs" class=" btn btn-secondary">LET ME IN</a>
   </div>
+</div>
+    </section>
  </main>
 
 
