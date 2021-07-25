@@ -199,6 +199,11 @@ p {
     margin-top: 50px;
   }
 
+  .gallery-background {
+    height: 700px;
+  }
+ 
+
 
 .learn-section p {
   background-color: white;
@@ -218,10 +223,28 @@ p {
 }
 /* //Media Queries for responsiveness*/
 
+/* Gallery 3D page */
+.gallery-3d {
+  background: url("../images/blathers-art-background.jpg");
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+}
+
 .holds-the-iframe{
  
     background:url("../images/blathers.gif") center center no-repeat;
     border-radius: 5px;
+  }
+
+  .gallery-3d h1 {
+    font-size: 40px;
+    color: white;
+    
+  }
+
+  .gallery-3d p {
+    color: white;
   }
 
 @keyframes spin {
