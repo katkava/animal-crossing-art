@@ -201,9 +201,7 @@ p {
     margin-top: 50px;
   }
 
-  .gallery-background {
-    height: 700px;
-  }
+ 
  
 
 
@@ -227,17 +225,16 @@ p {
 
 /* Gallery 3D page */
 .gallery-3d {
-  background: url("../images/blathers-art-background.jpg");
+  background: url("../images/celeste-blathers-background.jpg");
   background-size: cover;
   height: 100%;
   overflow: hidden;
+  background-position: 0px -100px;
+  background-repeat: no-repeat;
 }
-
-.holds-the-iframe{
- 
-    background:url("../images/blathers.gif") center center no-repeat;
-    border-radius: 5px;
-  }
+.gallery-background {
+  height: 600px;
+}
 
   .gallery-3d h1 {
     font-size: 50px;
@@ -281,7 +278,6 @@ p {
     margin-top: 0px;
   }
 
-
   .gallery3d-section .btn {
     margin-top: 20px;
   }
@@ -319,11 +315,27 @@ p {
 .gallery-3d p {
   font-size: 30px;
 }
+
+.gallery-3d {
+  background-position: -200px 0px;
+  background-repeat: no-repeat;
+}
 }
 
 @media (min-width: 601px) and (max-width: 800px) {
  .welcome h1, .btn-primary, .btn-secondary, h3, h2 {
     font-size: 30px;
+  }
+  .gallery-3d {
+    background-position: -50px 0px;
+  }
+
+} 
+
+
+@media (min-width: 801px) and (max-width: 1000px) {
+  .gallery-3d {
+    background-position: 0px 0px;
   }
 
 }
