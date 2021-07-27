@@ -251,6 +251,20 @@ p {
    
   }
 
+  /* Community Page Login */
+
+  .community-page {
+    height: 600px;
+  }
+  .background-image {
+   
+    background: url("../images/community-background.jpg");
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+    
+  }
+  
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
