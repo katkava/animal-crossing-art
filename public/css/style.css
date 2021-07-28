@@ -128,7 +128,7 @@ a.nav-link:hover{
 /*------------- Homepage ---------------*/
 
 
-p {
+p, .community-page h1 {
   font-family: 'Amatic SC', sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -221,7 +221,7 @@ p {
 .navbar-brand {
   font-size: 25px;
 }
-/* //Media Queries for responsiveness*/
+
 
 /* Gallery 3D page */
 .gallery-3d {
@@ -250,26 +250,32 @@ p {
     line-height: 40px;
    
   }
-
+  
   /* Community Page Login */
 
   .community-page {
     height: 600px;
+    
+  } 
+
+  .community-buttons {
+    padding-top: 400px;
   }
-  .background-image {
+  .community-background-image {
    
     background: url("../images/community-background.jpg");
     background-size: cover;
     height: 100%;
     overflow: hidden;
+    background-position: 0px 0px;
     
   }
-/* 
-  .community-page .boton {
-    position: absolute;
-    bottom: 0;
+
+  .community-page h1 {
+    font-size: 40px;
+
   }
-  */
+ 
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
@@ -339,6 +345,23 @@ p {
   background-position: -200px 0px;
   background-repeat: no-repeat;
 }
+.community-page h1 {
+  font-size: 40px;
+
+} 
+.community-background-image {
+  background-position: 0px 50px;
+  background-size: 200%;
+  background-repeat: no-repeat;
+} 
+
+.community-buttons {
+  padding-top: 300px;
+} 
+
+.community-page {
+  height: 500px;
+}
 }
 
 @media (min-width: 601px) and (max-width: 800px) {
@@ -346,15 +369,17 @@ p {
     font-size: 30px;
   }
   .gallery-3d {
-    background-position: -50px 0px;
+    background-position: 0px 0px;
   }
+ 
 
 } 
 
 
-@media (min-width: 801px) and (max-width: 1000px) {
+@media (min-width: 801px) and (max-width: 1025px) {
   .gallery-3d {
     background-position: 0px 0px;
-  }
-
+  } 
+ 
+  
 }
