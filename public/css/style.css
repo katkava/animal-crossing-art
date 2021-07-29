@@ -345,10 +345,17 @@ p, .community-page h1 {
   background-position: -200px 0px;
   background-repeat: no-repeat;
 }
+
+.gallery-3d 
 .community-page h1 {
   font-size: 40px;
 
 } 
+
+.gallery-3d .btn{
+  margin-top: 300px;
+  
+}
 .community-background-image {
   background-position: 0px 50px;
   background-size: 200%;
@@ -370,8 +377,11 @@ p, .community-page h1 {
   }
   .gallery-3d {
     background-position: 0px 0px;
+  } 
+  
+  .gallery-content {
+    margin-top: -100px;
   }
- 
 
 } 
 
@@ -380,6 +390,10 @@ p, .community-page h1 {
   .gallery-3d {
     background-position: 0px 0px;
   } 
+  .gallery-content {
+    margin-top: -100px;
+  }
+
  
   
 }
