@@ -128,7 +128,7 @@ a.nav-link:hover{
 /*------------- Homepage ---------------*/
 
 
-p, .community-page h1 {
+p, .community-page h1, .learn-page h1 {
   font-family: 'Amatic SC', sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -251,6 +251,7 @@ p, .community-page h1 {
    
   }
   
+ 
   /* Community Page Login */
 
   .community-page {
@@ -274,7 +275,34 @@ p, .community-page h1 {
   .community-page h1 {
     font-size: 40px;
 
-  }
+  } 
+
+  /* Learn PAGE */ 
+  .card-img-top {
+    
+    object-fit: scale-down;
+    background-color:thistle;
+} 
+
+.learn-page .card {
+  border-radius: 10px;
+} 
+
+.learn-page .card-group .card:hover {
+  box-shadow: 0px 40px 50px -20px rgb(175, 144, 175);
+  z-index: 100;
+}
+.learn-page .card:hover .card-title{
+  color: rgb(175, 144, 175);
+}
+.learn-page h5, .learn-page p {
+  font-family: 'Gowun Dodum', sans-serif;
+  font-size: 20px;
+}
+
+.learn-page h1 {
+  font-size: 40px;
+}
  
 @keyframes spin {
   0% { transform: rotate(0deg); }

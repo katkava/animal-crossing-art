@@ -1,25 +1,34 @@
 <%- include('partials/header') -%>
 
- 
-<div class="container">
-  <div class="row justify-content-center mt-5">
-    <ul class="row list-unstyled">
+ <section class="learn-page">
+  <div class="d-flex flex-wrap container-fluid pt-5 pl-5 ml-md-5 pr-5">
+    <div class="row d-flex">
+   <div class="col-12">
+   <h1 class="text-center mt-5">Welcome to our Gallery</h1>
+   <p  class="text-center text-muted mt-5">Read up on some interseting facts about world's famous masterpieces and gain a few extra brain wrinkles. </p>
+   </div>
+   </div>
+   </div>
+     <div class="card-group row row-cols-2 row-cols-md-3 g-4 m-5">
       <% for(var i=0; i<paintings.length; i++) {%>
-        <li class="col-6 justify-content-between mt-5">
+      <div class="col">
+       
+        <div class="card mb-5">
           <a href="/painting/<%= paintings[i]._id%>">
-            <img class="img-fluid" src="<%= paintings[i].image%>">
+          <img src="<%= paintings[i].image%>" class="card-img-top" alt="...">
+        </a>
+          <div class="card-body">
+            <h5 class="card-title "><%= paintings[i].artist %></h5>
+            <p class="card-text text-muted"><%= paintings[i].name%></p>
+          </div>
           </a>
-          <h4>
-            <%= paintings[i].artist %>
-          </h4>
-          <h4>
-            <%= paintings[i].name%>
-          </h4>
-        </li>
-        <% } %>
-    </ul>
-  </div>
-</div>
-
+         
+        </div>
+        
+      </div> 
+      <% } %>
+     
+      </div>
+    </section>
 
  <%- include('partials/footer') -%>
