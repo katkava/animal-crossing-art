@@ -424,6 +424,17 @@ p, .community-page h1, .learn-page h1, .game-page h1 {
 
 .community-page {
   height: 500px;
+} 
+
+.game-page-background {
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.game-page-background h1 {
+  color: black;
+  font-size: 30px;
+  line-height: 35px;
 }
 }
 
@@ -439,6 +450,19 @@ p, .community-page h1, .learn-page h1, .game-page h1 {
     margin-top: -100px;
   }
 
+  .community-buttons {
+    padding-top: 300px;
+  } 
+
+  .game-page-background h1 {
+    font-size: 30px;
+    color: black;
+  }
+
+  .game-page-background {
+    background-position: center;
+  }
+
 } 
 
 
@@ -450,6 +474,9 @@ p, .community-page h1, .learn-page h1, .game-page h1 {
     margin-top: -100px;
   }
 
+  
+  
+  
  
   
 }
