@@ -128,7 +128,7 @@ a.nav-link:hover{
 /*------------- Homepage ---------------*/
 
 
-p, .community-page h1, .learn-page h1 {
+p, .community-page h1, .learn-page h1, .game-page h1 {
   font-family: 'Amatic SC', sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -307,7 +307,35 @@ p, .community-page h1, .learn-page h1 {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+} 
+
+/*Game page initial screen */
+
+.game-page {
+  
+  width: 100%;
+  height: 600px;
+  
+} 
+
+
+.game-page h1 {
+  color: white;
+  font-size: 40px;
+  line-height: 40px;
 }
+
+.game-page-background {
+   
+  background: url("../images/game-redd-background-2.jpg");
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+  background-position: 0px 0px;
+  
+}
+
+
 /* // Medium devices (tablets, 768px and up)
  */ 
 
