@@ -3,6 +3,7 @@
 
 <main>
   <section class="game-page">
+  
     <div class="game-page-background"> 
     <div class="container-fluid"> 
 
@@ -17,27 +18,31 @@
 </div>
 </div>
 
-    <div id="question-container" class="hide">
-    <div id="answer-buttons"class="row justify-content-center mt-5">
-    <ul class="row list-unstyled">
-        <div id="bothPainting">
-        <div id="painting1"> </div> 
-        <div id="painting2"> </div>
+<!-- game part itself -->
+
+    <div id="question-container" class="hide game-paintings">
+   
+      <div class=" row d-flex  justify-content-center">
+        <h1 class="mt-5 ml-5 mr-5 text-center" style="color: black;">Choose the real painting</h1>
+    </div>
+        <div id="bothPainting"  class="row offset-1 m-5" >
+        <div id="painting1" class="gamePainting col-12 col-md-6 d-flex justify-content-center pb-5 " > </div> 
+        <div id="painting2" class="gamePainting col-12 col-md-6 d-flex justify-content-center pb-5 bg-image hover-zoom" > </div>
       </div>
      <h3></h3>
      <h4></h4>
-    </ul>
+     <button id="next-btn" class="next-btn btn hide btn-secondary">Next</button> 
+
     </div>
-  </div>
-    <div class="controls">
+    
+    
       
-    <button id="next-btn" class="next-btn btn hide btn-secondary">Next</button> 
+   
+
+  
     <a id="restart-btn" class="restart-btn btn hide btn-secondary" href="/game">Play again!</a>
-      <!-- add ejs to reload the page here in the button tag, on button click change variables-->
-    </div>
-</div> 
-</div>
-</div>
+      <!-- add ejs to reload the page here in the button tag, on button click change variables--> 
+
 </section>
  
 <script>  
@@ -77,15 +82,15 @@ const paintings = <%- JSON.stringify(paintings)%>
    painting1 = '<img class="img-fluid" src="' + paintSource + '">';
    painting2 = '<img class="img-fluid" src="' + fakeSource + '">';
     
-    $('#painting1').append('<div id = "real">' + painting1 + '</div>')
-    $('#painting2').append('<div id = "fake">' + painting2 + '</div>')  
+    $('#painting1').append('<div id = "real" >' + painting1 + '</div>')
+    $('#painting2').append('<div id = "fake" >' + painting2 + '</div>')  
      } else {
         let fakeSource = paintings[randomIndex].image;
         let paintSource = paintings[randomIndex].fakeImage;
       fakeDescription = paintings[randomIndex].fakeDescription;
 
       painting1 = '<img class="img-fluid" src="' + paintSource + '">';
-      painting2 = '<img class="img-fluid" src="' + fakeSource + '">';
+      painting2 = '<img  class="img-fluid" src="' + fakeSource + '">';
 
       $('#painting1').append('<div id = "fake">' + painting1 + '</div>')
       $('#painting2').append('<div id = "real">' + painting2 + '</div>')
