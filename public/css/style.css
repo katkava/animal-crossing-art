@@ -432,9 +432,9 @@ p, .community-page h1, .learn-page h1, .game-page h1 {
 }
 
 .game-page-background h1 {
-  color: black;
-  font-size: 30px;
-  line-height: 35px;
+  font-size: 25px;
+  line-height: 25px;
+  color: whitesmoke;
 }
 }
 
@@ -455,8 +455,7 @@ p, .community-page h1, .learn-page h1, .game-page h1 {
   } 
 
   .game-page-background h1 {
-    font-size: 30px;
-    color: black;
+    font-size: 25px;
   }
 
   .game-page-background {
