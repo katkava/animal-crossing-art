@@ -503,7 +503,10 @@ h3 {
 
   .game-page-background {
     background-position: center;
+    height: 100vh;
   } 
+
+  
 
 } 
 
