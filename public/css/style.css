@@ -179,15 +179,20 @@ p, .community-page h1, .learn-page h1, .game-page h1 {
 
 .btn-secondary {
   background-image: url("/images/background1.jpg");
-  color:black;
+  
 }
 
 .btn-primary:hover, .btn-secondary:hover {
-  
+  color: white;
   background-image: none;
   background-color: #9E5500;
   border: 3px solid white;
+  
 }  
+
+.btn-secondary:focus {
+  color: black;
+}
 
 
 .gameWelcome-section p {
