@@ -362,11 +362,23 @@ margin-bottom: 100px;
   cursor: pointer;
 }
 
+.green {
+  box-shadow: 20px 20px 20px 20px rgb(194, 243, 194);
+}
+
+.red {
+  box-shadow: 20px 20px 20px 20px rgb(240, 163, 163);
+}
+
+h3 {
+  font-size: 30px;
+}
+
 /* .game-buttons {
   padding-top: 300px;
   
 } */
-/* // Medium devices (tablets, 768px and up)
+/* // Small devices (tablets, 768px and up)
  */ 
 
  @media screen and (max-width: 600px) {
@@ -491,7 +503,7 @@ margin-bottom: 100px;
 
   .game-page-background {
     background-position: center;
-  }
+  } 
 
 } 
 

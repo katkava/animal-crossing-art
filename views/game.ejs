@@ -11,12 +11,12 @@
         <h1 class="mt-5 ml-5 mr-5 text-center">Are you a fine art connoiseur? Spot the fake and beat Redd.</h1>
     </div>
     <!--community buttons are customised and overwriting what's going on here-->
-<div class="row d-flex  justify-content-around community-buttons" >
+      <div class="row d-flex  justify-content-around community-buttons" >
     
-  <button id="start-btn" class="start-btn btn btn-primary" >Play Game</button>
-</div>
-</div>
-</div>
+        <button id="start-btn" class="start-btn btn btn-primary" >Play Game</button>
+      </div>
+    </div>
+  </div>
 
 <!-- game part itself -->
 
@@ -24,26 +24,24 @@
    
       <div class=" row d-flex  justify-content-center">
         <h1 class="mt-5 ml-5 mr-5 text-center" style="color: black;">Choose the real painting</h1>
-    </div>
-    <div class=" d-flex">
-     <div  class=" column align-self-center"> <h3></h3> </div>
-      <div> <h4></h4></div>
-      <div> <button id="next-btn" class="next-btn btn hide btn-secondary">Next</button> 
-    </div>
-    </div>
+    </div> 
+
+    <div class="d-flex flex-column"> 
+      <div class="d-flex justify-content-center"> <h3 class="text-center pt-5"></h3> </div>
+       <div class="d-flex justify-content-center"> <h4 class="text-center "></h4></div>
+       <div class="d-flex justify-content-center"><button id="next-btn" class="next-btn btn hide btn-secondary col-4">Next</button></div>
+    
+     </div>
+    
         <div id="bothPainting"  class="row offset-1 m-5" >
         <div id="painting1" class="gamePainting col-12 col-md-6 d-flex justify-content-center pb-5 " > </div> 
-        <div id="painting2" class="gamePainting col-12 col-md-6 d-flex justify-content-center pb-5 bg-image hover-zoom" > </div>
-      </div>
-     
+        <div id="painting2" class="gamePainting col-12 col-md-6 d-flex justify-content-center bg-image hover-zoom" > </div>
+      </div> 
 
+      
     </div>
     
     
-      
-   
-
-  
     <a id="restart-btn" class="restart-btn btn hide btn-secondary" href="/game">Play again!</a>
       <!-- add ejs to reload the page here in the button tag, on button click change variables--> 
 
@@ -86,7 +84,7 @@ const paintings = <%- JSON.stringify(paintings)%>
    painting1 = '<img class="img-fluid" src="' + paintSource + '">';
    painting2 = '<img class="img-fluid" src="' + fakeSource + '">';
     
-    $('#painting1').append('<div id = "real" >' + painting1 + '</div>')
+    $('#painting1').append('<div id = "real"> ' + painting1 + '</div>')
     $('#painting2').append('<div id = "fake" >' + painting2 + '</div>')  
      } else {
         let fakeSource = paintings[randomIndex].image;
@@ -97,7 +95,7 @@ const paintings = <%- JSON.stringify(paintings)%>
       painting2 = '<img  class="img-fluid" src="' + fakeSource + '">';
 
       $('#painting1').append('<div id = "fake">' + painting1 + '</div>')
-      $('#painting2').append('<div id = "real">' + painting2 + '</div>')
+      $('#painting2').append('<div id="real">' + painting2 + '</div>')
      } 
     }  
      
@@ -126,12 +124,16 @@ const paintings = <%- JSON.stringify(paintings)%>
       jQuery('html,body').animate({scrollTop:0},500);
       nextButton.classList.remove('hide')
         score+=1
-        $('h3').html(`Yay, this is the real deal! ${fakeDescription}. Your score ${score}`)
+        $('#real').addClass('green')
+        $('h3').html(`Yay, this is the real deal! ${fakeDescription}`)
+        $('h4').html(`Your score ${score}`)
   
       }else if(event.target.id == "fake" || event.target.closest('#fake')){
-        jQuery('html,body').animate({scrollTop:0},500);
+        $('html,body').animate({scrollTop:0},500);
+        $('#fake').addClass('red')
         nextButton.classList.remove('hide')
-        $('h3').html(`Oh no, Redd's got you! ${fakeDescription}. Your score ${score}`)
+        $('h3').html(`Oh no, Redd's got you! ${fakeDescription}`)
+        $('h4').html(`Your score ${score}`)
       }   
       
     } 
