@@ -64,12 +64,13 @@ const paintings = <%- JSON.stringify(paintings)%>
     const nextButton = document.getElementById('next-btn')
     const questionContainerElement = document.getElementById("question-container")
     let score = 0 
+
     let questionNumber = 0
     var previousPainting = [6, 6, 6, 6]
 
     startButton.addEventListener("click", startGame)
     nextButton.addEventListener("click", checkIfGameComplete) 
-    document.addEventListener('click', checkPainting)
+    $('#bothPainting').on('click', checkPainting)
  
 
 
@@ -124,15 +125,18 @@ const paintings = <%- JSON.stringify(paintings)%>
 //     // do things, then
 //     removeEventListener('click', foo);
 // }
-  
 
-  function checkPainting(event) {  
+
+   function checkPainting() {  
     
     
     if (event.target.id == "real" || event.target.closest('#real')) {
       jQuery('html,body').animate({scrollTop:0},500);
       nextButton.classList.remove('hide')
-        score+=1
+      
+        score++
+
+        $('#bothPainting').css( 'pointer-events', 'none' );
         $('#real').addClass('green')
         $('h3').html(`Yay, this is the real deal! ${fakeDescription}`)
         $('h4').html(`Your score ${score}`)
@@ -140,6 +144,7 @@ const paintings = <%- JSON.stringify(paintings)%>
       }else if(event.target.id == "fake" || event.target.closest('#fake')){
         $('html,body').animate({scrollTop:0},500);
         $('#fake').addClass('red')
+        $('#bothPainting').css( 'pointer-events', 'none' );
         nextButton.classList.remove('hide')
         $('h3').html(`Oh no, Redd's got you! ${fakeDescription}`)
         $('h4').html(`Your score ${score}`)
@@ -147,18 +152,30 @@ const paintings = <%- JSON.stringify(paintings)%>
       
     } 
 
+   
+  
     function checkIfGameComplete() {
+     
       nextButton.classList.add('hide')
+      
       console.log(questionNumber)
       if(questionNumber < 3 ) {
+        
         nextPaintings()
+        
+        
+        
+
       }else{
         endGame()
       }
     } 
+    
 
   function nextPaintings() {
     questionNumber++
+    $('#bothPainting').css( 'pointer-events', 'auto' );
+    
       $('#painting1').empty(painting1)
       $('#painting2').empty(painting2)
       $('h3').empty(fakeDescription)
