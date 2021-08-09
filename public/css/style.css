@@ -363,7 +363,7 @@ margin-bottom: 100px;
 }
 
 .green {
-  box-shadow: 20px 20px 20px 20px rgb(194, 243, 194);
+  box-shadow: 20px 20px 20px 20px rgb(202, 227, 198);
 }
 
 .red {
@@ -372,6 +372,10 @@ margin-bottom: 100px;
 
 h3 {
   font-size: 30px;
+}
+
+.finalScreen img {
+  max-height: 600px;
 }
 
 /* .game-buttons {
@@ -479,6 +483,14 @@ h3 {
   line-height: 25px;
   color: whitesmoke;
 }
+
+.finalScreen h2, .btn {
+  font-size: 25px;
+}
+
+.finalScreen .isabelle{
+  margin-top: -100px;
+}
 }
 
 @media (min-width: 601px) and (max-width: 800px) {
@@ -506,7 +518,10 @@ h3 {
     height: 100vh;
   } 
 
-  
+  finalScreen .isabelle{
+    height: 300px;
+  }
+
 
 } 
 
