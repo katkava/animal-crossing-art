@@ -37,7 +37,7 @@ module.exports = {
     } catch (err) {
       console.log(err);
     }
-  },
+  // },
   // createPainting = (req, res) => {
   //     // Upload image to cloudinary
   //     let painting_body = req.body;
@@ -56,5 +56,5 @@ module.exports = {
   //         return res.status(500)
   //         .json(reponse.ApiResponse(false, 500, "oops an error occurred", undefined, error))
   //       })
-  // },
+  }
 };

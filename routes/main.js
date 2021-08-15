@@ -24,4 +24,5 @@ router.post("/signup", authController.postSignup);
 router.get("/learn", paintingsController.getLearn);
 router.get("/game", paintingsController.getGame);
 
+
 module.exports = router;

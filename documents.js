@@ -39,12 +39,23 @@ db.once("open", function () {
       fakeDescription:
         "Seems the boy was taking too many hair vitamins, those luscious locks are TOO luscious for a sneaky reason!",
     },
+
+    {
+      name: "Girl with a Pearl Earring",
+      artist: "Johannes Vermeer",
+      year: "1665",
+      image: "https://imgur.com/2CxIjnO.png",
+      details: "Dutch Golden Age",
+      fakeImage: "https://imgur.com/3Ds6Qyf.png",
+      fakeDescription:
+        "Pay attention to the earrings. It's Girl with a Pearl Earring, not Girl with a Starry Night ;) ",
+    }
   ];
 
   // save multiple documents to the collection referenced by Painting Model
-  Painting.collection.insertMany(
+ Painting.collection.insertMany(
     paintings,
-    { ordered: false },
+   { ordered: false }),
     function (err, docs) {
       if (err) {
         return console.error(err);
@@ -52,5 +63,4 @@ db.once("open", function () {
         console.log("Multiple documents inserted to Collection");
       }
     }
-  );
 });
