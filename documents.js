@@ -50,17 +50,22 @@ db.once("open", function () {
       fakeDescription:
         "Pay attention to the earrings. It's Girl with a Pearl Earring, not Girl with a Starry Night ;) ",
     }
+
   ];
 
   // save multiple documents to the collection referenced by Painting Model
+
+Painting.collection.createIndex({ "name" : 1 }, {unique: true})
+
+try{
  Painting.collection.insertMany(
     paintings,
-   { ordered: false }),
-    function (err, docs) {
-      if (err) {
-        return console.error(err);
+   { ordered: false })
+ }catch {
+      if (err.code === 11000) {
+        console.log('User already exist!');;
       } else {
-        console.log("Multiple documents inserted to Collection");
+        console.error(err);
       }
     }
 });
